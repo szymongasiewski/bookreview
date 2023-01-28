@@ -18,15 +18,30 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='logo'>
-                <Link to='/'>xdsadada</Link>
+                <Link to='/'>BOOKREVIEW</Link>
             </div>
             <ul>
-                {user ? (
+                <li>
+                    <Link to='/'>Home</Link>
+                </li>
+                {user && <>
+                <li>
+                    <Link to='/reviews'>Reviews</Link>
+                </li>
+                <li>
+                    <Link to='/favourites'>Favourites</Link>
+                </li> </>}
+                {user ? (<>
+                <li>
+                    <Link to='/profile'>
+                        <FaUser/> Profile
+                    </Link>
+                </li>
                 <li>
                     <button className='btn' onClick={onLogout}>
                         <FaSignOutAlt/> Logout
                     </button>
-                </li>) : (<>
+                </li></>) : (<>
                 <li>
                     <Link to='/login'>
                         <FaSignInAlt/> Login

@@ -5,6 +5,51 @@
       "password": "$2a$10$.o2jzMzzWZ3uafmFo4.y6u/9BGSfMXDpC0glEoIxekFA2g8a/m992",
       "name": "name",
       "id": 1
+    },
+    {
+      "email": "user1@user.com",
+      "password": "$2a$10$LY.lgwQWbPAq/7qmFqM8Uuok5NtkIU36suU2xe0zyWtqHwilCVcvu",
+      "id": 2
+    },
+    {
+      "email": "user2@user.com",
+      "password": "$2a$10$GEVCEYM/9iHAR5Tt0OHkeOw43qMxP.iHkeOadN/u/oOnJwYYMn8Ke",
+      "id": 3
+    },
+    {
+      "email": "user3@user.com",
+      "password": "$2a$10$x7kQ6uvP376v7HGhmoksOueRH6.uS5L4jHw3BPD6KKL2FYSjW2UpC",
+      "id": 4
+    },
+    {
+      "email": "user4@user.com",
+      "password": "$2a$10$wrhupvwp9AucaJt2C/uVxekRCLHy0aXFxwJIDrI/XeTnrbrVA9.fS",
+      "id": 5
+    },
+    {
+      "email": "user5@user.com",
+      "password": "$2a$10$e2BZvd50DXeLC28JdnMEBu9Zvp5tkaQ7fi0ItIP9ZrjK3/2aVQa8G",
+      "id": 6
+    },
+    {
+      "email": "user6@user.com",
+      "password": "$2a$10$4J0Kubt95jnzkcuuoofxuuf6nolPDyaK2ONWKqPUnixLi7zjDz0ma",
+      "id": 7
+    },
+    {
+      "email": "user7@user.com",
+      "password": "$2a$10$j3Ppygzv69j7AAa0Ml74Qes0NZ3Ru.kWpeEIzL2uy6gl9bDcLKZlW",
+      "id": 8
+    },
+    {
+      "email": "user8@user.com",
+      "password": "$2a$10$pBX9EEET/A0YM0I/ysKDOuXHcfEEyj5NiAQ9JCYRayOxt5ryHbm4K",
+      "id": 9
+    },
+    {
+      "email": "user9@user.com",
+      "password": "$2a$10$p6XIorRu76O6GIie5qjpCOXfy1NIQmrWJcO8syvkTUVdd5SuX3TjK",
+      "id": 10
     }
   ]
 }

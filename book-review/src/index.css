@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+ul li button {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +43,6 @@ h3 {
 
 .container {
   width: 100%;
-  max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
@@ -110,7 +115,7 @@ h3 {
 
 .form,
 .content {
-  width: 70%;
+  width: 30%;
   margin: 0 auto;
 }
 
@@ -158,6 +163,11 @@ h3 {
 .btn-reverse {
   background: #fff;
   color: #000;
+}
+
+.btn-delete {
+  border: 0px;
+  background-color: red;
 }
 
 .btn-block {

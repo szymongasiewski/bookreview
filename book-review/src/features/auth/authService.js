@@ -24,10 +24,21 @@ const login = async(userData) => {
     return response.data;
 }
 
+const deleteAcc = async(userData) => {
+    const response = await axios.delete('http://localhost:3004/users/' + userData);
+
+    if(response.data) {
+        localStorage.removeItem('user');
+    }
+
+    return response.data;
+}
+
 const authService = {
     register,
     logout,
     login,
+    deleteAcc
 }
 
 export default authService;
