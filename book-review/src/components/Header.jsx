@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa'
+import {FaSignInAlt, FaSignOutAlt, FaUser, FaBookOpen} from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
@@ -18,16 +18,16 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='logo'>
-                <Link to='/'>BOOKREVIEW</Link>
+                <Link to='/'> <FaBookOpen /> BOOKREVIEW</Link>
             </div>
             <ul>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>
-                {user && <>
                 <li>
                     <Link to='/reviews'>Reviews</Link>
                 </li>
+                {user && <>
                 <li>
                     <Link to='/favourites'>Favourites</Link>
                 </li> </>}

@@ -119,6 +119,11 @@ h3 {
   margin: 0 auto;
 }
 
+.form-search {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .form-group {
   margin-bottom: 10px;
 }
@@ -163,6 +168,13 @@ h3 {
 .btn-reverse {
   background: #fff;
   color: #000;
+}
+
+.btn-search {
+  width: 25%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .btn-delete {
