@@ -19,7 +19,6 @@ export const getBooks = createAsyncThunk(
                 return {
                     id: book.key.replace('/works/', ''),
                     author: book.author_name,
-                    //cover_id: book.cover_i,
                     cover_img: `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`,
                     edition_count: book.edition_count,
                     first_publish_year: book.first_publish_year,

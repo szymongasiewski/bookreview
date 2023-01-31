@@ -14,8 +14,7 @@ const getFavourites = async (userId) => {
 
 const removeFavourite = async (id) => {
     const response = await axios.delete('http://localhost:3004/favourites/' + id);
-    //console.log(response);
-    //console.log(response.data);
+    
     return response.data;
 }
 

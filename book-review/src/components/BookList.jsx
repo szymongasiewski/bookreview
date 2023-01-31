@@ -1,13 +1,22 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Spinner from './Spinner';
 import "./BookList.css";
 import Book from './Book';
-import { Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getFavourites } from '../features/favourites/favouritesSlice';
 
 const BookList = () => {
 	const books = useSelector((state) => state.books);
-	console.log(books);
+	const {user} = useSelector((state) => state.auth);
+	
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		if(user) {
+			dispatch(getFavourites(user.user.id));
+		}
+	}, [dispatch, user]);
 	
 	if(books.isLoading) {
         return <Spinner/>

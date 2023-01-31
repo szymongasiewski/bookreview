@@ -2,16 +2,14 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFavourites } from '../features/favourites/favouritesSlice';
-import Book from './Book';
 import "./BookList.css";
 import Favourite from './Favourite';
 
 const FavouritesList = () => {
     const {user} = useSelector((state) => state.auth);
     const favourites = useSelector((state) => state.favourites);
-    const dispatch = useDispatch();
 
-	//console.log(favourites);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getFavourites(user.user.id));

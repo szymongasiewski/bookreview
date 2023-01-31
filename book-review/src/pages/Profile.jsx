@@ -36,12 +36,6 @@ const Profile = () => {
             <section>
                 <div>
                     <ul>
-                        {/*<li>
-                            <button className='btn'>Change email</button>
-                        </li>
-                        <li>
-                            <button className='btn'>Change password</button>
-    </li>*/}
                         <li>
                             <button onClick={onDelete} className='btn btn-delete'>Delete account</button>
                         </li>

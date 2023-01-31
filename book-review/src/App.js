@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import Reviews from "./pages/Reviews";
 import Favourites from "./pages/Favourites";
 import BookDetails from "./components/BookDetails";
+import Review from "./pages/Review";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path='/reviews' element={<Reviews/>}></Route>
             <Route path='/favourites' element={<Favourites/>}></Route>
             <Route path='/:id' element={<BookDetails/>}></Route>
+            <Route path='/review' element={<Review/>}></Route>
           </Routes>
         </div>
       </BrowserRouter>

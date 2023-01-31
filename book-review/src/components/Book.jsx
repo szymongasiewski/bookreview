@@ -1,32 +1,35 @@
 import React from 'react'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { addToFavourites } from '../features/favourites/favouritesSlice';
 import "./BookList.css";
 
 const Book = (book) => {
 	const {user} = useSelector((state) => state.auth);
 	const favourite = useSelector((state) => state.favourites)
-	const dispatch = useDispatch();
+
 	const [isFavourite, setIsFavourite] = useState(!favourite.items.some(el => el.book.id === book.id));
+
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const favouriteOnSubmit = (e) => {
 		e.preventDefault();
-		console.log('----------------');
-		console.log(user);
+		
 		const data = {
 			userId: user.user.id,
 			book: book
 		}
-		console.log(data);
-		console.log('----------------');
+		
 		setIsFavourite(favourite.items.some(el => el.book.id === book.id));
 		dispatch(addToFavourites(data));
 	}
 
-	//console.log(book);
-	//console.log(book.author.join(', '));
+	const goToReview = () => {
+		navigate('/review', {state:{title: book.title, year: book.first_publish_year, author: book.author, bookId: book.id}});
+	}
+
   	return (
     	<div className='book-item flex flex-column flex-sb'>
 			<div className='book-item-img'>
@@ -58,7 +61,7 @@ const Book = (book) => {
 				{user && isFavourite &&
 				<button type='submit' onClick={favouriteOnSubmit} className='btn btn-block'>Add to Favourites</button>}
 				{user &&
-				<button className='btn btn-block'>Review</button>}
+				<button onClick={goToReview} className='btn btn-block'>Review</button>}
 			</div>
 		</div>
   	)
