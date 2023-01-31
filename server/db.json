@@ -8,48 +8,197 @@
     },
     {
       "email": "user1@user.com",
-      "password": "$2a$10$LY.lgwQWbPAq/7qmFqM8Uuok5NtkIU36suU2xe0zyWtqHwilCVcvu",
+      "password": "$2a$10$hAsRUO4fq1ZIXOlgWqAMXOdcuJTwJxGeCuMhMSn6M6t76Ll0YoclK",
+      "name": "user1",
       "id": 2
     },
     {
       "email": "user2@user.com",
-      "password": "$2a$10$GEVCEYM/9iHAR5Tt0OHkeOw43qMxP.iHkeOadN/u/oOnJwYYMn8Ke",
+      "password": "$2a$10$1eVwOOloggxHpmua7fBIu.TxnQgO7CQtn27G1XWbRIvITItfPMrn2",
+      "name": "user2",
       "id": 3
     },
     {
       "email": "user3@user.com",
-      "password": "$2a$10$x7kQ6uvP376v7HGhmoksOueRH6.uS5L4jHw3BPD6KKL2FYSjW2UpC",
+      "password": "$2a$10$wtYA/oWg9CnA2oegiIrrueFtqbEPeQpSrGmmh4K/D1a9FHKtDii6K",
+      "name": "user3",
       "id": 4
     },
     {
       "email": "user4@user.com",
-      "password": "$2a$10$wrhupvwp9AucaJt2C/uVxekRCLHy0aXFxwJIDrI/XeTnrbrVA9.fS",
+      "password": "$2a$10$j7mkLZZMB0WDCeY2At7G.eONhkXIiWyja5xVNFIQzOZwzt0roxY3S",
+      "name": "user4",
       "id": 5
     },
     {
       "email": "user5@user.com",
-      "password": "$2a$10$e2BZvd50DXeLC28JdnMEBu9Zvp5tkaQ7fi0ItIP9ZrjK3/2aVQa8G",
+      "password": "$2a$10$NGcH985kKmrC5ft.ChQdKOJmFgdVUppfQSKv6Hsz8hVQOZHLGx75u",
+      "name": "user5",
       "id": 6
     },
     {
       "email": "user6@user.com",
-      "password": "$2a$10$4J0Kubt95jnzkcuuoofxuuf6nolPDyaK2ONWKqPUnixLi7zjDz0ma",
+      "password": "$2a$10$2vNscpbnYXDCBrZE4BjU0uuF/uC64tDbDRU8Ix9TxsaYVz4abaHj2",
+      "name": "user6",
+      "id": 7
+    }
+  ],
+  "favourites": [
+    {
+      "userId": 1,
+      "book": {
+        "id": "OL82586W",
+        "author": [
+          "J. K. Rowling"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/10110415-L.jpg",
+        "edition_count": 114,
+        "first_publish_year": 2007,
+        "title": "Harry Potter and the Deathly Hallows"
+      },
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "book": {
+        "id": "OL82565W",
+        "author": [
+          "J. K. Rowling"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/10716273-L.jpg",
+        "edition_count": 122,
+        "first_publish_year": 2005,
+        "title": "Harry Potter and the Half-Blood Prince"
+      },
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "book": {
+        "id": "OL27739988W",
+        "author": [
+          "J.R.R. Tolkien",
+          "John Ronald Reuel Tolkien",
+          "Tanaka Tomoko"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/undefined-L.jpg",
+        "edition_count": 2,
+        "first_publish_year": 1992,
+        "title": "The Lord of the Rings"
+      },
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "book": {
+        "id": "OL1118938W",
+        "author": [
+          "Adam Mickiewicz"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/533401-L.jpg",
+        "edition_count": 41,
+        "first_publish_year": 1834,
+        "title": "Pan Tadeusz"
+      },
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "book": {
+        "id": "OL20546953W",
+        "author": [
+          "Adam Mickiewicz"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/9191730-L.jpg",
+        "edition_count": 14,
+        "first_publish_year": 1962,
+        "title": "Pan Tadeusz"
+      },
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "book": {
+        "id": "OL20561889W",
+        "author": [
+          "Adam Mickiewicz"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/12690476-L.jpg",
+        "edition_count": 4,
+        "first_publish_year": 1930,
+        "title": "Pan Tadeusz"
+      },
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "book": {
+        "id": "OL29266083W",
+        "author": [
+          "Adam Mickiewicz"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/undefined-L.jpg",
+        "edition_count": 3,
+        "first_publish_year": 1894,
+        "title": "Pan Tadeusz"
+      },
       "id": 7
     },
     {
-      "email": "user7@user.com",
-      "password": "$2a$10$j3Ppygzv69j7AAa0Ml74Qes0NZ3Ru.kWpeEIzL2uy6gl9bDcLKZlW",
+      "userId": 2,
+      "book": {
+        "id": "OL29276107W",
+        "author": [
+          "Adam Mickiewicz"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/undefined-L.jpg",
+        "edition_count": 3,
+        "first_publish_year": 1834,
+        "title": "Pan Tadeusz"
+      },
       "id": 8
     },
     {
-      "email": "user8@user.com",
-      "password": "$2a$10$pBX9EEET/A0YM0I/ysKDOuXHcfEEyj5NiAQ9JCYRayOxt5ryHbm4K",
+      "userId": 2,
+      "book": {
+        "id": "OL1118934W",
+        "author": [
+          "Adam Mickiewicz"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/4203164-L.jpg",
+        "edition_count": 6,
+        "first_publish_year": 1886,
+        "title": "Pan Tadeusz, czyli, Ostatni zajazd na Litwie"
+      },
       "id": 9
     },
     {
-      "email": "user9@user.com",
-      "password": "$2a$10$p6XIorRu76O6GIie5qjpCOXfy1NIQmrWJcO8syvkTUVdd5SuX3TjK",
+      "userId": 2,
+      "book": {
+        "id": "OL3165147W",
+        "author": [
+          "Kazimierz Wyka"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/undefined-L.jpg",
+        "edition_count": 2,
+        "first_publish_year": 1963,
+        "title": "Pan Tadeusz"
+      },
       "id": 10
+    },
+    {
+      "userId": 2,
+      "book": {
+        "id": "OL5425271W",
+        "author": [
+          "Stanisław Rossowski"
+        ],
+        "cover_img": "https://covers.openlibrary.org/b/id/undefined-L.jpg",
+        "edition_count": 1,
+        "first_publish_year": 1929,
+        "title": "Pan Tadeusz"
+      },
+      "id": 11
     }
   ]
 }

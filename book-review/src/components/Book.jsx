@@ -1,9 +1,31 @@
 import React from 'react'
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { addToFavourites } from '../features/favourites/favouritesSlice';
 import "./BookList.css";
 
 const Book = (book) => {
-	console.log(book);
+	const {user} = useSelector((state) => state.auth);
+	const favourite = useSelector((state) => state.favourites)
+	const dispatch = useDispatch();
+	const [isFavourite, setIsFavourite] = useState(!favourite.items.some(el => el.book.id === book.id));
+
+	const favouriteOnSubmit = (e) => {
+		e.preventDefault();
+		console.log('----------------');
+		console.log(user);
+		const data = {
+			userId: user.user.id,
+			book: book
+		}
+		console.log(data);
+		console.log('----------------');
+		setIsFavourite(favourite.items.some(el => el.book.id === book.id));
+		dispatch(addToFavourites(data));
+	}
+
+	//console.log(book);
 	//console.log(book.author.join(', '));
   	return (
     	<div className='book-item flex flex-column flex-sb'>
@@ -11,26 +33,32 @@ const Book = (book) => {
 				<img src = {book.cover_img} alt = "cover" />
 			</div>
 			<div className='book-item-info text-center'>
-				<Link to = {'/'/*`/book/${book.id}`} {...book*/}>
-				<div className='book-item-info-item title fw-7 fs-18'>
-					<span>{book.title}</span>
-				</div>
+				<Link to = {`/${book.id}`}>
+					<div className='book-item-info-item title fw-7 fs-18'>
+						<span>{book.title}</span>
+					</div>
 				</Link>
 
 				<div className='book-item-info-item author fs-15'>
-				<span className='text-capitalize fw-7'>Author: </span>
-				<span>{book.author === undefined ? 'No author' : book.author.join(', ')}</span>
+					<span className='text-capitalize fw-7'>Author: </span>
+					<span>{book.author === undefined ? 'No author' : book.author.join(', ')}</span>
 				</div>
 
 				<div className='book-item-info-item edition-count fs-15'>
-				<span className='text-capitalize fw-7'>Total Editions: </span>
-				<span>{book.edition_count}</span>
+					<span className='text-capitalize fw-7'>Total Editions: </span>
+					<span>{book.edition_count}</span>
 				</div>
 
 				<div className='book-item-info-item publish-year fs-15'>
-				<span className='text-capitalize fw-7'>First Publish Year: </span>
-				<span>{book.first_publish_year}</span>
+					<span className='text-capitalize fw-7'>First Publish Year: </span>
+					<span>{book.first_publish_year}</span>
 				</div>
+			</div>
+			<div>
+				{user && isFavourite &&
+				<button type='submit' onClick={favouriteOnSubmit} className='btn btn-block'>Add to Favourites</button>}
+				{user &&
+				<button className='btn btn-block'>Review</button>}
 			</div>
 		</div>
   	)

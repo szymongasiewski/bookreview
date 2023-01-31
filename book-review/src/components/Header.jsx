@@ -3,6 +3,7 @@ import {FaSignInAlt, FaSignOutAlt, FaUser, FaBookOpen} from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
+import SearchForm from './SearchForm'
 
 const Header = () => {
     const navigate = useNavigate();
