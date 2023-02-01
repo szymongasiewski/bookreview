@@ -18,10 +18,17 @@ const getBookReviews = async (bookId) => {
     return response.data;
 }
 
+const deleteReview = async (id) => {
+    const response = await axios.delete('http://localhost:3004/reviews/' + id);
+    
+    return response.data;
+}
+
 const reviewsService = {
     addReview,
     getUserReviews,
-    getBookReviews
+    getBookReviews,
+    deleteReview
 }
 
 export default reviewsService;

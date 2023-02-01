@@ -31,16 +31,16 @@
       "id": 5
     },
     {
-      "email": "user5@user.com",
-      "password": "$2a$10$NGcH985kKmrC5ft.ChQdKOJmFgdVUppfQSKv6Hsz8hVQOZHLGx75u",
-      "name": "user5",
-      "id": 6
-    },
-    {
       "email": "user6@user.com",
       "password": "$2a$10$2vNscpbnYXDCBrZE4BjU0uuF/uC64tDbDRU8Ix9TxsaYVz4abaHj2",
       "name": "user6",
       "id": 7
+    },
+    {
+      "email": "user5@user.com",
+      "password": "$2a$10$bgjdvfa1f1H8tIznLodDo.FgTM.dMN5mhbZDF0N8a8XzvtlatTEpa",
+      "name": "user5",
+      "id": 8
     }
   ],
   "favourites": [
@@ -71,22 +71,6 @@
         "title": "Harry Potter and the Half-Blood Prince"
       },
       "id": 2
-    },
-    {
-      "userId": 1,
-      "book": {
-        "id": "OL27739988W",
-        "author": [
-          "J.R.R. Tolkien",
-          "John Ronald Reuel Tolkien",
-          "Tanaka Tomoko"
-        ],
-        "cover_img": "https://covers.openlibrary.org/b/id/undefined-L.jpg",
-        "edition_count": 2,
-        "first_publish_year": 1992,
-        "title": "The Lord of the Rings"
-      },
-      "id": 3
     },
     {
       "userId": 2,
@@ -299,20 +283,6 @@
       "rate": "1",
       "reviewBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a efficitur nisl, in luctus urna. Ut vel rutrum tortor. Quisque sed imperdiet magna. Suspendisse laoreet diam et elementum consequat. Aliquam molestie nibh et varius congue. In metus justo, commodo sit amet tempor sed, blandit ac tellus. Sed nisi mauris, placerat vitae metus nec, imperdiet fringilla justo. Nunc facilisis tempor felis, eget feugiat nulla sodales sed. Sed ipsum neque, aliquam quis enim vel, laoreet volutpat felis. Morbi in dolor vehicula sapien venenatis accumsan. Phasellus maximus cursus augue, vulputate suscipit diam blandit euismod.\n\nPraesent id velit nec orci auctor malesuada nec sit amet dolor. Donec efficitur erat non mi feugiat, eu dapibus ipsum tincidunt. Fusce ultrices faucibus accumsan. Etiam et interdum lacus, sed fringilla risus. Duis dignissim non velit sit amet bibendum. Pellentesque nec elit rutrum, ornare dolor sed, ultrices neque. Nullam velit mi, elementum ut massa vitae, vulputate auctor ipsum. Vivamus ornare congue auctor. Vestibulum porttitor mi et ultricies tincidunt. Vestibulum ac consectetur orci. Pellentesque eu posuere eros.",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "userName": "name",
-      "bookId": "OL82586W",
-      "title": "Harry Potter and the Deathly Hallows",
-      "year": 2007,
-      "author": [
-        "J. K. Rowling"
-      ],
-      "reviewTitle": "3rd review",
-      "rate": "10",
-      "reviewBody": "Praesent id velit nec orci auctor malesuada nec sit amet dolor. Donec efficitur erat non mi feugiat, eu dapibus ipsum tincidunt. Fusce ultrices faucibus accumsan. Etiam et interdum lacus, sed fringilla risus. Duis dignissim non velit sit amet bibendum. Pellentesque nec elit rutrum, ornare dolor sed, ultrices neque. Nullam velit mi, elementum ut massa vitae, vulputate auctor ipsum. Vivamus ornare congue auctor. Vestibulum porttitor mi et ultricies tincidunt. Vestibulum ac consectetur orci. Pellentesque eu posuere eros.",
-      "id": 4
     },
     {
       "userId": 2,

@@ -26,17 +26,6 @@ const Register = () => {
         }));
     }
 
-    useEffect(() => {
-        if(auth.isError) {
-            toast.error(auth.message);
-        }
-
-        if(auth.isSuccess || auth.user) {
-            navigate('/');
-        }
-        dispatch(reset());
-    }, [auth.user, auth.isError, auth.isSuccess, auth.message, navigate, dispatch]);
-
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -53,6 +42,17 @@ const Register = () => {
             dispatch(register(userData));
         }
     }
+
+    useEffect(() => {
+        if(auth.isError) {
+            toast.error(auth.message);
+        }
+
+        if(auth.isSuccess || auth.user) {
+            navigate('/');
+        }
+        dispatch(reset());
+    }, [auth.user, auth.isError, auth.isSuccess, auth.message, navigate, dispatch]);
 
     if(auth.isLoading) {
         return <Spinner/>

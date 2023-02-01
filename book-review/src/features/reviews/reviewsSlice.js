@@ -57,6 +57,23 @@ export const getBookReviews = createAsyncThunk(
     }
 );
 
+export const deleteReview = createAsyncThunk(
+    'reviews/deleteReview',
+    async (id, thunkAPI) => {
+        try {
+            await reviewsService.deleteReview(id);
+            return id;
+        }
+        catch(error) {
+            const message = (error.response && error.response.data
+                && error.response.data.message) || error.message
+                || error.toString();
+
+            return thunkAPI.rejectWithValue(message);
+        }
+    }
+);
+
 export const reviewsSlice = createSlice({
     name: 'reviews',
     initialState,
@@ -115,6 +132,25 @@ export const reviewsSlice = createSlice({
             state.reviews = action.payload;
         })
         .addCase(getBookReviews.rejected, (state, action) => {
+            state.isLoading = false;
+            state.isError = true;
+            state.message = action.payload;
+            state.isSuccess = false;
+        })
+        .addCase(deleteReview.pending, (state) => {
+            state.isLoading = true;
+            state.isSuccess = false;
+            state.isError = false;
+            state.message = '';
+        })
+        .addCase(deleteReview.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.isSuccess = true;
+            state.isError = false;
+            state.message = '';
+            state.reviews = state.reviews.filter((item) => item.id !== action.payload);
+        })
+        .addCase(deleteReview.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
             state.message = action.payload;

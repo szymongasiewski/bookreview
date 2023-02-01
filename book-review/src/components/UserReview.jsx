@@ -1,8 +1,18 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { deleteReview } from '../features/reviews/reviewsSlice';
 import "./BookList.css";
 
 const UserReview = (review) => {
+	const dispatch = useDispatch();
+
+	const deleteOnSubmit = (e) => {
+		e.preventDefault();
+
+		dispatch(deleteReview(review.id));
+	}
+
     return (
 		<div className='book-item flex flex-column flex-sb'>
 			<div className='book-item-info text-center'>
@@ -29,7 +39,7 @@ const UserReview = (review) => {
 				</div>
 			</div>
 			<div>
-				<button type='submit' className='btn btn-block btn-delete'>Delete</button>
+				<button type='submit' onClick={deleteOnSubmit} className='btn btn-block btn-delete'>Delete</button>
 			</div>
 		</div>
     )

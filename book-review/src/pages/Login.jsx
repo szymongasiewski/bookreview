@@ -17,17 +17,6 @@ const Login = () => {
 
     const auth = useSelector((state) => state.auth);
 
-    useEffect(() => {
-        if(auth.isError) {
-            toast.error(auth.message);
-        }
-
-        if(auth.isSuccess || auth.user) {
-            navigate('/');
-        }
-        dispatch(reset());
-    }, [auth.user, auth.isError, auth.isSuccess, auth.message, navigate, dispatch]);
-
     const onChange = (e) => {
         setFormData((prevState) => ({
             ...prevState,
@@ -45,6 +34,17 @@ const Login = () => {
 
         dispatch(login(userData));
     }
+
+    useEffect(() => {
+        if(auth.isError) {
+            toast.error(auth.message);
+        }
+
+        if(auth.isSuccess || auth.user) {
+            navigate('/');
+        }
+        dispatch(reset());
+    }, [auth.user, auth.isError, auth.isSuccess, auth.message, navigate, dispatch]);
 
     if(auth.isLoading) {
         return <Spinner/>
